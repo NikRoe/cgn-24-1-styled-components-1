@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+import { Open_Sans } from "next/font/google";
+const openSans = Open_Sans({ subsets: ["latin"] });
+
 export default createGlobalStyle`
   *, 
   *::before,
@@ -15,7 +18,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${openSans.style.fontFamily};
     padding: 2rem;
   }
 `;
